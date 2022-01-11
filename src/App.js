@@ -1,10 +1,10 @@
 import './App.css';
-import NavBarIndex from './Componentes/MyFunctionalComponents';
+import NavBar from './Componentes/NavBar/navBar';
 
 function App() {
   return (
     <div className="App">
-      <NavBarIndex />
+      <NavBar />
     </div>
     
   );

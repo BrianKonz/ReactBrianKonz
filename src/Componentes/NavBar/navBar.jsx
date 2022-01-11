@@ -1,6 +1,6 @@
 import "./styles.css";
 
-const NavBarIndex = () => {
+const NavBar = () => {
    return <div>
         <ul className="navBar">
         <li>
@@ -19,4 +19,4 @@ const NavBarIndex = () => {
     </div>
 }
 
-export default NavBarIndex
+export default NavBar
