@@ -3,20 +3,19 @@
     background-color: #1076d6;
     display: flex;
     flex-direction: row;
-    padding: 5px;
     justify-content: space-around;
-    margin-top: 2rem;
+    width: 100%;
 }
 
-a {
+.navText {
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
 }
 
-.navBar :hover { 
+.navText:hover { 
     text-shadow:
 		0 0 5px rgb(255, 0, 255),
 		0 0 10px rgba(255, 0, 255),
@@ -25,5 +24,32 @@ a {
 		0 0 80px rgba(127, 38, 100),
 		0 0 90px rgba(127, 38, 100),
 		0 0 100px rgba(127, 38, 100);
+}
+
+.buscarNav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+.buscarNav:hover {
+    border-color: white;
+    outline: 0 none;
+}
+
+.liNav {
+    margin-top: 4px;
+}
+
+.logoLobo {
+    margin: 2px;
+}
+
+.contenedorBuscador {
+    width: 50%;
+}
+
+.botonNav {
+    margin: 10px;
 }
 
