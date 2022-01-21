@@ -1,0 +1,76 @@
+.container {
+    border-radius: 10px;
+    margin: 20px;
+    justify-content: center;
+    display: inline-block;
+    border: 3px solid;
+    transition: 1s;
+}
+
+.container:hover {
+    transform:scale(0.99);
+}
+
+.imagesArtistas {
+    margin: 1rem;
+}
+
+.nombreArtista {
+    font-size: 1.7rem;
+    letter-spacing: .5px;
+}
+
+.textoCard {
+    font-size: 1.5rem;
+    letter-spacing: .5px;
+}
+
+.precioCard {
+    font-size: 1.6rem;
+    letter-spacing: .5px;
+  }
+
+.producto {
+    margin: .5rem;
+}
+
+
+
+.buttonCarrito {
+    background-color: #1965ac;
+    padding: 10px;
+    margin: 1rem;
+    border: 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-decoration: none;
+    color: #F5F5F5;
+    cursor: pointer;
+}
+  
+.buttonCarrito:hover {
+    background: #1076d6;
+    transition: all 1s ease-in-out;
+}
+
+.sumaResta {
+    background-color: #1965ac;
+    padding: 5px 10px;
+    margin: 1rem;
+    border: 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-decoration: none;
+    color: #F5F5F5;
+    cursor: pointer;
+}
+
+.counterCard {
+    width: 10%;
+    text-align: center;
+}
+
+
+
