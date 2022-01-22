@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Artistas.css";
 
 
-function CardArtista ({ imagenArtista, artista , fecha , hora , lugar , precio , agregarCarrito}) {
+function CardArtista ({ imagenArtista, artista , fecha , hora , lugar , precio , agregarCarrito, stock}) {
 
     const [counter, setCounter] = useState (1); 
 
@@ -13,7 +13,7 @@ function CardArtista ({ imagenArtista, artista , fecha , hora , lugar , precio ,
     };
 
     const sumarEntrada = () => {
-        if (counter < 4) {
+        if (counter < stock) {
         setCounter(counter + 1);
         }
     };

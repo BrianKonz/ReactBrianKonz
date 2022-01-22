@@ -15,7 +15,8 @@ const ContenedorArtistas = () => {
              fecha="10-02-2022"
              hora="16.00 hs a 22.00 hs"
              lugar="Campo de Polo"
-             precio="$5000"  
+             precio="$5000" 
+             stock= "10" 
              /> 
             <CardArtista
             imagenArtista={MaceoPlex}
@@ -23,7 +24,8 @@ const ContenedorArtistas = () => {
             fecha="18-02-2022"
             hora="22.00 hs a 06.00 hs"
             lugar="Mandarin Park"
-            precio="$3500"   
+            precio="$3500"
+            stock= "35"   
             /> 
             <CardArtista
             imagenArtista={AmelieLens}
@@ -31,7 +33,8 @@ const ContenedorArtistas = () => {
             fecha="24-02-2022"
             hora="23.00 hs a 07.00 hs"
             lugar="Crobar"
-            precio="$4700"  
+            precio="$4700"
+            stock= "20"  
             /> 
             <CardArtista
             imagenArtista={PeggyGou}
@@ -39,7 +42,8 @@ const ContenedorArtistas = () => {
             fecha="28-02-2022"
             hora="21.00 hs a 05.00 hs"
             lugar="Mandarin Park"
-            precio="$3750"   
+            precio="$3750"
+            stock= "40"   
             /> 
         </>
     );
