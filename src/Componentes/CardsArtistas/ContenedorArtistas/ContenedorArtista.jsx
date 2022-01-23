@@ -4,6 +4,17 @@ import MaceoPlex from '../ContenedorArtistas/ImgArtistas/MaceoPlex.png';
 import AmelieLens from '../ContenedorArtistas/ImgArtistas/Ame.png';
 import PeggyGou from '../ContenedorArtistas/ImgArtistas/Peggy.png';
 
+
+/* const getData = async () => {
+    try {
+        const resultado = await ContenedorArtistas ();
+        console.log(resultado)
+    } catch (error) {
+        console.log ("Algo salió mal", error)
+    }
+};
+
+getData (); */
  
 const ContenedorArtistas = () => {
 
