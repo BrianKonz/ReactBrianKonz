@@ -24,7 +24,7 @@ function CardArtista ({ imagenArtista, artista , fecha , hora , lugar , precio ,
                 <div className="container">
                     <div>
                         <div className="imagesArtistas">
-                            <img src={imagenArtista}/>
+                            <img src={imagenArtista} alt={artista}/>
                         </div>
                         <div className="producto">
                             <h1 className="nombreArtista">Artista: {artista} </h1>
