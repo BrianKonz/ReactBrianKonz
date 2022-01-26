@@ -12,7 +12,7 @@ const ARTISTAS = [
 
     {
     id: 1,
-    imagenArtista:'/images/HernanCattaneo.png',
+    imagenArtista:'/images/MaceoPlex.png',
     artista: 'Maceo Plex',
     fecha: '18-02-2022',
     hora: '22.00 hs a 06.00 hs',
@@ -23,7 +23,7 @@ const ARTISTAS = [
 
     {
     id: 2,  
-    imagenArtista: '/images/HernanCattaneo.png',
+    imagenArtista: '/images/Ame.png',
     artista: 'Amelie Lens',
     fecha: '24-02-2022',
     hora: '23.00 hs a 07.00 hs',
@@ -34,7 +34,7 @@ const ARTISTAS = [
 
     {
     id: 3,
-    imagenArtista: '/images/HernanCattaneo.png',
+    imagenArtista: '/images/Peggy.png',
     artista: 'Peggy Gou',
     fecha: '28-02-2022',
     hora: '21.00 hs a 05.00 hs',
@@ -45,7 +45,7 @@ const ARTISTAS = [
 ];
 
 export function getArtists() {
-    return new promise ((resolve,reject) => {
+    return new Promise ((resolve,reject) => {
         setTimeout (() => resolve(ARTISTAS),3000)
     });
 }
