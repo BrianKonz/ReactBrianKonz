@@ -47,12 +47,13 @@
 
 .buscarNav {
     width: 50%;
-    height: 55%;
+    height: 60%;
     outline: 0 none;
     box-sizing: border-box;
     border: none;
     padding: 0 20px;
     border-radius: 25px 0 0 25px;
+    padding-top: 7px;
 }
 
 .liNav {
@@ -69,8 +70,8 @@
 }
 
 .botonNav {
-    width: 15%;
-    height: 55%;
+    width: 10%;
+    height: 60%;
     border: none;
     border-radius: 0 25px 25px 0;
     text-transform: uppercase;
@@ -78,25 +79,16 @@
     text-decoration: none;
     color: white;
     cursor: pointer;
-    outline: none;
+    outline: 0;
     background-color: #fa9623;
-    margin: 10px;
+    margin-top: 8px;
+    margin-left: 5px;
 }
 
-.botonNav:hover {
-    text-shadow:
-		0 0 5px rgb(255, 0, 255),
-		0 0 10px rgba(255, 0, 255),
-		0 0 20px rgba(255, 0, 255),
-		0 0 40px rgb(127, 38, 100),
-		0 0 80px rgba(127, 38, 100),
-		0 0 90px rgba(127, 38, 100),
-		0 0 100px rgba(127, 38, 100);
+
+.lupa {
     color: white;
-    transition: all .1s ease-in-out;
+    justify-content: center;
+    padding: 3px;
+    
 }
-
-.icon-tabler-shopping-cart {
-    margin: .5rem;
-}
-

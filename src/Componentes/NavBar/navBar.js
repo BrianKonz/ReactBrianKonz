@@ -1,4 +1,5 @@
 import "./nav.css";
+import { FaSearch } from 'react-icons/fa'
 
 const NavBar = () => {
    return ( 
@@ -18,9 +19,12 @@ const NavBar = () => {
                 </li>
                 <div className="contenedorBuscador">
                     <input className="buscarNav" type="serch"></input>
-                    <button className="botonNav" type="submit">Buscar</button>
+                    <button className="botonNav" type="submit">
+                    <FaSearch className="lupa" />
+                    </button>
                 </div>
                 <div>
+                
                 </div>
                 </ul>
         </>
