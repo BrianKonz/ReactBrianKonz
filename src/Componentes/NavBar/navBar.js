@@ -1,5 +1,6 @@
 import "./nav.css";
 import { FaSearch } from 'react-icons/fa'
+import { BsCart4 } from 'react-icons/bs'
 
 const NavBar = () => {
    return ( 
@@ -20,12 +21,10 @@ const NavBar = () => {
                 <div className="contenedorBuscador">
                     <input className="buscarNav" type="serch"></input>
                     <button className="botonNav" type="submit">
-                    <FaSearch className="lupa" />
+                    <FaSearch className="lupaIcon" />
                     </button>
                 </div>
-                <div>
-                
-                </div>
+                <BsCart4 className="carritoIcon" />
                 </ul>
         </>
     );

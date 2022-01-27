@@ -86,9 +86,18 @@
 }
 
 
-.lupa {
+.lupaIcon {
     color: white;
     justify-content: center;
     padding: 3px;
     
+}
+
+.carritoIcon {
+    justify-content: center;
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    cursor: pointer;
 }
