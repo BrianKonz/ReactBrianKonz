@@ -7,12 +7,15 @@ const ArtistasList = () => {
     const [loader, setLoader] = useState(false)
     
     useEffect(() => {
+        const URL = "http://localhost:3001/ARTISTAS"
+    
         setLoader(true)
-        getArtists()
-        .then((data) => {setArtistas(data)})
-        .catch((error) => {console.log(error)})
+        fetch(URL)
+        .then((response) => response.json())
+        .then((json) => setArtistas(json))
+        .catch((error) => console.log(error))
         .finally(() => setLoader(false))
-    }, []) 
+    }, []); 
     
     return (
         <>
