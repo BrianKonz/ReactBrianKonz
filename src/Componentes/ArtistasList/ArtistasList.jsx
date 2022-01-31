@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { getArtists } from "../DataBase";
 import CardArtista from '../CardsArtistas/Artistas'
 
 const ArtistasList = () => {

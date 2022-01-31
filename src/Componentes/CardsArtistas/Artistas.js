@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Artistas.css";
 
 
 function CardArtista ({artista}) {
+    const navigate = useNavigate();
 
     const [counter, setCounter] = useState (1); 
 
@@ -38,7 +40,7 @@ function CardArtista ({artista}) {
                                 <input className="sumaResta" type="button" onClick={sumarEntrada} value="+"></input>
                             </div>
                             <div>
-                                <button className="buttonCarrito" onClick={artista.agregarCarrito}>Agregar al carrito</button>
+                                <button className="buttonCarrito" onClick={() => navigate(`/artistas/${artista.id}`)}>Ver más</button>
                             </div>
                         </div>
                     </div> 
