@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const ArtistaDetail = () => {
     const [artistaDetail, setArtistaDetail] = useState({});
     const [loading, setLoading] = useState(false);
-    const [artistaId] = useParams();
+    const {artistaId} = useParams();
 
     useEffect(() => {
         const URL = `http://localhost:3001/ARTISTAS/${artistaId}` 
@@ -22,7 +22,7 @@ const ArtistaDetail = () => {
     }
 
 console.log(artistaDetail)
-return <p>artistaDetail.artista</p>
+return <p>{artistaDetail.artista}</p>
 
 };
 
