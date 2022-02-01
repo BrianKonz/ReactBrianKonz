@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 const ArtistaDetail = () => {
     const [artistaDetail, setArtistaDetail] = useState({});
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
     const {artistaId} = useParams();
 
     useEffect(() => {
@@ -13,16 +14,24 @@ const ArtistaDetail = () => {
         fetch(URL)
         .then((response) => response.json())
         .then((data) => setArtistaDetail(data))
-        .catch((error) => console.log(error))
+        .catch((error) => setError(error))
         .finally(() => setLoading(false))
     },[artistaId])
 
     if (loading) {
         <p>Cargando...</p>
+    }else if(error) {
+        <p>Error 404</p>
     }
 
-console.log(artistaDetail)
-return <p>{artistaDetail.artista}</p>
+return (
+    <>
+    <div className="container">
+
+    </div>
+    <p>{artistaDetail.artista}</p>
+    </>
+)
 
 };
 

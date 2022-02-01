@@ -16,7 +16,7 @@ function App() {
         </Route>
         <Route path='artistas'>
           <Route index element={<ArtistasDetailContainer />} />
-          <Route path='artistaId' element={<ArtistaDetail />} />
+          <Route path=':artistaId' element={<ArtistaDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
