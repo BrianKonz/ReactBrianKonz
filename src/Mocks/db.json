@@ -8,7 +8,8 @@
         "hora": "16.00 hs a 22.00 hs",
         "lugar": "Campo de Polo",
         "precio": 5000, 
-        "stock": 10        
+        "stock": 10, 
+        "descripcion": "Hernan Cattaneo se presentará el día Sábado 10 de Febrero a las 16 hs en el Campo de Polo, reserva tu entrada."       
         },
 
         {
@@ -19,7 +20,8 @@
         "hora": "22.00 hs a 06.00 hs",
         "lugar": "Mandarin Park",
         "precio": 3500,
-        "stock": 35
+        "stock": 35,
+        "descripcion": "Maceo Plex se presentará el día Viernes 18 de Febrero a las 22 hs en Mandarin Park, reserva tu entrada."
         },
 
         {
@@ -30,7 +32,8 @@
         "hora": "23.00 hs a 07.00 hs",
         "lugar": "Crobar",
         "precio": 4700,
-        "stock": 20
+        "stock": 20,
+        "descripcion": "Amelie Lens se presentará el día Domingo 24 de Febrero a las 23 hs en Crobar, reserva tu entrada."
         },
 
         {
@@ -41,7 +44,10 @@
         "hora": "21.00 hs a 05.00 hs",
         "lugar": "Mandarin Park",
         "precio": 3750,
-        "stock": 40
+        "stock": 40,
+        "descripcion": "Peggy Gou se presentará el día Viernes 28 de Febrero a las 21 hs en Mandarin Park, reserva tu entrada."
         }
+
+        
     ]
 }

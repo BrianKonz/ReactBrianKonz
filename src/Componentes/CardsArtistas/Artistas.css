@@ -3,12 +3,14 @@
     margin: 20px;
     justify-content: center;
     display: inline-block;
-    border: 3px solid;
     transition: 1s;
+    
 }
 
 .container:hover {
     transform:scale(0.99);
+    color: rgba(236, 53, 206, 0.678);
+    border: 1px solid rgba(236, 53, 206, 0.678);
 }
 
 .imagesArtistas {
@@ -28,7 +30,19 @@
 .precioCard {
     font-size: 1.6rem;
     letter-spacing: .5px;
+    color: black;
   }
+
+.Descripcion {
+    color: #1965ac;
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    margin: 5px;
+
+}
 
 .producto {
     margin: .5rem;
@@ -37,22 +51,17 @@
 
 
 .buttonCarrito {
-    background-color: #1965ac;
     padding: 10px;
     margin: 1rem;
     border: 0;
     border-radius: 2px;
     text-transform: uppercase;
     letter-spacing: .5px;
-    text-decoration: none;
-    color: #F5F5F5;
+    color: #1965ac;
     cursor: pointer;
+    background-color: rgb(224, 235, 224);
 }
-  
-.buttonCarrito:hover {
-    background: #1076d6;
-    transition: all 1s ease-in-out;
-}
+
 
 .sumaResta {
     background-color: #1965ac;

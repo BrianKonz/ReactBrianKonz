@@ -61,8 +61,12 @@
 }
 
 .tituloLogo {
-    padding: 10px;
     color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 25%;
 }
 
 .contenedorBuscador {

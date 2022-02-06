@@ -1,13 +1,12 @@
 import React from "react";
 import ContenedorArtistas from "../Componentes/CardsArtistas/ContenedorArtistas/ContenedorArtista";
 
-const Home = () => {
+const Entradas = () => {
     return ( <div className="App">
-       Hola soy la home
+      <ContenedorArtistas />
     </div>
 
     )
 }
 
-export default Home
-
+export default Entradas

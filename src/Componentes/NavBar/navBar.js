@@ -1,22 +1,23 @@
 import "./nav.css";
 import { FaSearch } from 'react-icons/fa'
 import { BsCart4 } from 'react-icons/bs'
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
    return ( 
         <>
                 <ul className="navBar">
                 <div>
-                    <h2 className="tituloLogo">EMT ARGENTINA</h2>
+                    <Link to='/' className="tituloLogo">EMT ARGENTINA</Link>
                 </div>
                 <li className="liNav">
-                    <a className="navText" href="">Home</a>
+                    <Link to='/' className="navText">Home</Link>
                 </li>
                 <li className="liNav">
-                    <a className="navText" href="">Artistas</a>
+                    <Link to='/artistasmain' className="navText">Artistas</Link>
                 </li>
                 <li className="liNav">
-                    <a className="navText" href="">Entradas</a>
+                    <Link to='/entradas' className="navText">Entradas</Link>
                 </li>
                 <div className="contenedorBuscador">
                     <input className="buscarNav" type="serch"></input>
