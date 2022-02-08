@@ -5,7 +5,8 @@ import "./ArtistaDetail.css";
 import { useNavigate } from "react-router-dom";
 
 
-const ArtistaDetail = () => {
+
+const ArtistaDetail = ({ increment }) => {
     const [artistaDetail, setArtistaDetail] = useState({});
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -43,24 +44,24 @@ const ArtistaDetail = () => {
 
 return (
     <>
-
-    <div class="Card">
-        <div class="row g-0">
-            <div class="col-5 col-sm-4">
-                <img src={artistaDetail.imagenArtista} alt={artistaDetail.artista} />
+    <div>
+        <div >
+            <div>
+                <img src={artistaDetail.imagenEntradas} alt={artistaDetail.artista} />
             </div>
-            <div class="col-7 col-sm-8">
-                <div class="card-body">
-                    <h5 class="card-title">{artistaDetail.artista}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div>
+                <div>
+                    <h5>{artistaDetail.artista}</h5>
+                    <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <p><small>Last updated 3 mins ago</small></p>
                     <div>
                         <input className="sumaResta" type="button" onClick={restarEntrada} value="-"></input>
                         <input className="counterCard" type="text" value={counter}></input>
                         <input className="sumaResta" type="button" onClick={sumarEntrada} value="+"></input>
                     </div>
                     <div>
-                        <button onClick={()=>navegar('/entradas')}>Volver</button>
+                        <button className="buttonCarrito" onClick={()=>navegar('/entradas')}>Volver</button>
+                        <button className="buttonCarrito" onClick={increment}>Agregar al carrito</button>
                     </div>  
                 </div>
             </div>
