@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const ArtistaDetail = ({ increment }) => {
+const ArtistaDetail = () => {
     const [artistaDetail, setArtistaDetail] = useState({});
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -52,8 +52,7 @@ return (
             <div>
                 <div>
                     <h5>{artistaDetail.artista}</h5>
-                    <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <p><small>Last updated 3 mins ago</small></p>
+                    <p>{artistaDetail.descripcion}</p>
                     <div>
                         <input className="sumaResta" type="button" onClick={restarEntrada} value="-"></input>
                         <input className="counterCard" type="text" value={counter}></input>
@@ -61,7 +60,7 @@ return (
                     </div>
                     <div>
                         <button className="buttonCarrito" onClick={()=>navegar('/entradas')}>Volver</button>
-                        <button className="buttonCarrito" onClick={increment}>Agregar al carrito</button>
+                        <button className="buttonCarrito">Agregar al carrito</button>
                     </div>  
                 </div>
             </div>

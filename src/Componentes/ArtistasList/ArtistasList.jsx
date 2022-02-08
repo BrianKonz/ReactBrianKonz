@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import CardArtista from '../CardsArtistas/Artistas'
-import { getFirestore } from "../../Firebase";
+
 
 const ArtistasList = () => {
     const [artistas, setArtistas] = useState([])
