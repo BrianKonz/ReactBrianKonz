@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./ArtistaDetail.css";
 import { useNavigate } from "react-router-dom";
-
+import Contador from "../Contador/Contador";
+import { useCart } from "../../Context/CartContext";
 
 
 const ArtistaDetail = () => {
@@ -12,6 +13,9 @@ const ArtistaDetail = () => {
     const [error, setError] = useState(false);
     const {artistaId} = useParams();
     const navegar = useNavigate();
+    const {addArtista} = useCart();
+    const [counter, setCounter] = useState (1); 
+
     useEffect(() => {
         const URL = `http://localhost:3001/ARTISTAS/${artistaId}` 
         setLoading(true)
@@ -28,19 +32,10 @@ const ArtistaDetail = () => {
         <p>Error 404</p>
     }
 
-    const [counter, setCounter] = useState (1); 
 
-    const restarEntrada = () => {
-        if (counter > 1) {
-            setCounter((prevState) => prevState -1);
-        }
-    };
-
-    const sumarEntrada = () => {
-        if (counter < artistaDetail.stock) {
-        setCounter((prevState) => prevState +1);
-        }
-    };
+    const agregarCarrito = () => {
+        addArtista(artistaDetail, counter)
+    }
 
 return (
     <>
@@ -53,14 +48,10 @@ return (
                 <div>
                     <h5>{artistaDetail.artista}</h5>
                     <p>{artistaDetail.descripcion}</p>
-                    <div>
-                        <input className="sumaResta" type="button" onClick={restarEntrada} value="-"></input>
-                        <input className="counterCard" type="text" value={counter}></input>
-                        <input className="sumaResta" type="button" onClick={sumarEntrada} value="+"></input>
-                    </div>
+                    <Contador counter={counter} setCounter={setCounter} stock={artistaDetail.stock} />
                     <div>
                         <button className="buttonCarrito" onClick={()=>navegar('/entradas')}>Volver</button>
-                        <button className="buttonCarrito">Agregar al carrito</button>
+                        <button className="buttonCarrito" onClick={agregarCarrito}>Agregar al carrito</button>
                     </div>  
                 </div>
             </div>

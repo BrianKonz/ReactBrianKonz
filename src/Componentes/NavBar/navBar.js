@@ -35,7 +35,7 @@ const NavBar = () => {
                     <FaSearch className="lupaIcon" />
                     </button>
                 </div>
-                <BsCart4 className="carritoIcon" />
+                <Link to='/carrito'><BsCart4 className="carritoIcon" /></Link>
                 {counterCarrito}
                 </ul>
         </>

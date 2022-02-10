@@ -7,10 +7,13 @@ import ArtistaDetail from './Componentes/artistaDetail/ArtistaDetail';
 import ArtistasPages from './pages/ArtistasPages';
 import Entradas from './pages/Entradas';
 import NotFoundPage from './pages/NotFoundPage';
+import {CartProvider} from './Context/CartContext'
+import Carrito from './pages/Carrito';
 
 function App() {
   return (
     
+    <CartProvider>
     <BrowserRouter>
       <NavBar/>
       <Routes>
@@ -23,8 +26,9 @@ function App() {
         <Route path='entradas'>
             <Route index element={<Entradas />} />
         </Route>
-
-        
+        <Route path='carrito'>
+          <Route index element={<Carrito />} />
+        </Route>  
         <Route path='artistas'>
           <Route index element={<ArtistasDetailContainer />} />
           <Route path=':artistaId' element={<ArtistaDetail />} />
@@ -32,6 +36,8 @@ function App() {
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
+    </CartProvider>
+  
     
     
   );
