@@ -2,17 +2,15 @@ import "./nav.css";
 import { FaSearch } from 'react-icons/fa'
 import { BsCart4 } from 'react-icons/bs'
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useCart } from "../../Context/CartContext";
 
 
 
 const NavBar = () => {
 
-    const [counterCarrito, setCounterCarrito] = useState (0);
+    const {cart} = useCart();
 
-    const increment = () => {
-        setCounterCarrito((prevState) => prevState +1);
-    } 
+
 
    return ( 
         <>
@@ -36,8 +34,9 @@ const NavBar = () => {
                     </button>
                 </div>
                 <Link to='/carrito'><BsCart4 className="carritoIcon" /></Link>
-                {counterCarrito}
+                <span style={{backgroundColor:"red", color:"white"}}> {cart.length} </span>
                 </ul>
+                
         </>
     );
 

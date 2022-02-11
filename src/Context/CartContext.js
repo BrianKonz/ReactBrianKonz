@@ -19,7 +19,17 @@ export const CartProvider = ({ children }) => {
 
     }
 
-    return<CartContext.Provider value={{cart, addArtista}}>{children}</CartContext.Provider>
+    const limpiarCarrito = () => {
+
+        setCart([])
+    }
+
+    const borrarCompra = (id) => {
+
+        setCart((prevState) => prevState.filter((element) => element.entrada.id !== id) )
+    }
+
+    return<CartContext.Provider value={{cart, addArtista, limpiarCarrito, borrarCompra}}>{children}</CartContext.Provider>
     
 
 } 
