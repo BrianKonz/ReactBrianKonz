@@ -7,6 +7,8 @@ const Carrito = () => {
     const {cart, limpiarCarrito, borrarCompra} = useCart();
     const [name, setName] = useState ("")
     const [phone, setPhone] = useState("");
+    const [dni, setDni] = useState("");
+    const [comentario, setComentario] = useState("");
 
 
     const getTotal = (cart) => {
@@ -20,7 +22,7 @@ const Carrito = () => {
     const handleSubmit = async (evt) => {
       evt.preventDefault();
   
-      if (!name || !phone) {
+      if (!name || !phone || !dni || !comentario ) {
         console.log("Por favor llene los campos");
         return false;
       }
@@ -44,7 +46,6 @@ const Carrito = () => {
             <p style={{color:"red"}}>Artista: {compra.entrada.artista} </p>
             <p style={{color:"red"}}>Cantidad de entradas: {compra.cantidad} </p>
             <p style={{color:"red"}}>Precio: ${compra.entrada.precio * compra.cantidad} </p>
-            <button onClick={() => borrarCompra(compra.entrada.id)}>Borrar Compra</button>
             <button onClick={() => borrarCompra(compra.entrada.id)}>Borrar Compra</button>
             </div>
         )
@@ -77,6 +78,24 @@ const Carrito = () => {
           placeholder="Escriba su teléfono"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+        />
+        <label htmlFor="phone">DNI</label>
+        <input
+          type="number"
+          id="dni"
+          name="dni"
+          placeholder="Escriba su DNI"
+          value={dni}
+          onChange={(e) => setDni(e.target.value)}
+        />
+        <label htmlFor="phone">¿Algún comentario?</label>
+        <input
+          type="text"
+          id="comentario"
+          name="comentario"
+          placeholder="Escriba su comentario"
+          value={comentario}
+          onChange={(e) => setComentario(e.target.value)}
         />
         <input type="submit" value="Finalizar compra" />
       </form>
