@@ -28,7 +28,7 @@ const Carrito = () => {
       }
   
       const newOrder = {
-        buyer: { name, phone },
+        buyer: { name, phone, dni, comentario },
         items: cart,
         total: getTotal(cart),
       };
