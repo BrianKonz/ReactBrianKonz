@@ -35,6 +35,7 @@ const ArtistaDetail = () => {
 
     const agregarCarrito = () => {
         addArtista(artistaDetail, counter)
+        
     }
 
 return (

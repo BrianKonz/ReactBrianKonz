@@ -9,7 +9,7 @@
         "hora": "16.00 hs a 22.00 hs",
         "lugar": "Campo de Polo",
         "precio": 5000, 
-        "stock": 10, 
+        "stock": 10,
         "descripcion": "Hernan Cattaneo se presentará el día Sábado 10 de Febrero a las 16 hs en el Campo de Polo, reserva tu entrada."       
         },
 
@@ -49,7 +49,7 @@
         "lugar": "Mandarin Park",
         "precio": 3750,
         "stock": 40,
-        "descripcion": "Peggy Gou se presentará el día Viernes 28 de Febrero a las 21 hs en Mandarin Park, reserva tu entrada."
+        "descripcion": "Peggy Gou se presentará el día Viernes 28 de Febrero a las 21 hs en Mandarin Park, reserva tu entrada." 
         }
 
         

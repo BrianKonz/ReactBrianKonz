@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 
 
@@ -7,17 +7,42 @@ export const CartContext = createContext([]);
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState ([]);
+    const [cartCantidad, setCartCantidad] = useState(0);
+
+
+    useEffect(() => {
+        const getCantidad = () => {
+          let cantidad = 0;
+          cart.forEach((order) => {
+            cantidad += order.cantidad;
+          });
+          setCartCantidad(cantidad);
+        };
+        getCantidad();
+      }, [cart]);
 
     const addArtista = (entrada, cantidad) => {
 
-        const nuevoArtista = {entrada, cantidad}
-        console.log(cart)
+        const nuevoArtista = cart.some((order) => order.entrada.id === entrada.id);
 
-        setCart ((prevState) => [...prevState, nuevoArtista]) 
+        if (nuevoArtista) {
+            // Modificar la cantidad
+            const updatedCart = cart.map((order) => {
+              if (order.entrada.id === entrada.id) {
+                return { ...order, cantidad: cantidad + order.cantidad };
+              } else {
+                return order;
+              }
+            });
+            setCart(updatedCart);
+          } else {
+            // Agregar nuevo elemento
+            setCart((prev) => [...prev, { entrada, cantidad }]);
+          }
+        };
+    
 
-        
 
-    }
 
     const limpiarCarrito = () => {
 
@@ -29,7 +54,10 @@ export const CartProvider = ({ children }) => {
         setCart((prevState) => prevState.filter((element) => element.entrada.id !== id) )
     }
 
-    return<CartContext.Provider value={{cart, addArtista, limpiarCarrito, borrarCompra}}>{children}</CartContext.Provider>
+
+    
+
+    return<CartContext.Provider value={{cart, addArtista, limpiarCarrito, borrarCompra, cartCantidad}}>{children}</CartContext.Provider>
     
 
 } 
