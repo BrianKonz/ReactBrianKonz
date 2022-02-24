@@ -5,6 +5,7 @@ import "./ArtistaDetail.css";
 import { useNavigate } from "react-router-dom";
 import Contador from "../Contador/Contador";
 import { useCart } from "../../Context/CartContext";
+import { getFirestore } from "../../Firebase";
 
 
 const ArtistaDetail = () => {
@@ -17,16 +18,21 @@ const ArtistaDetail = () => {
     const [counter, setCounter] = useState (1); 
 
     useEffect(() => {
-        const URL = `http://localhost:3001/ARTISTAS/${artistaId}` 
+        const db = getFirestore()
+        const artistCollection = db.collection('ARTISTAS')
+        const selectedArtist = artistCollection.doc(artistaId);
+
+
         setLoading(true)
-        fetch(URL)
-        .then((response) => response.json())
-        .then((data) => setArtistaDetail(data))
+        selectedArtist.get().then(response => {
+        if (!response.exists) console.log ("el producto no existe");
+        setArtistaDetail({...response.data(), id: response.id})               
+        }) 
         .catch((error) => setError(error))
-        .finally(() => setLoading(false))
+        .finally (() => setLoading(false))      
     },[artistaId])
 
-    if (loading) {
+    if (loading || !setArtistaDetail) {
         <p>Cargando...</p>
     }else if(error) {
         <p>Error 404</p>
