@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useCart } from '../Context/CartContext';
+import { getFirestore } from '../Firebase';
 
 const Carrito = () => {
 
@@ -8,6 +9,7 @@ const Carrito = () => {
     const [name, setName] = useState ("")
     const [phone, setPhone] = useState("");
     const [dni, setDni] = useState("");
+    const [mail, setMail] = useState("");
     const [comentario, setComentario] = useState("");
 
 
@@ -22,18 +24,22 @@ const Carrito = () => {
     const handleSubmit = async (evt) => {
       evt.preventDefault();
   
-      if (!name || !phone || !dni || !comentario ) {
+      if (!name || !phone || !dni || !comentario || !mail) {
         console.log("Por favor llene los campos");
         return false;
       }
   
       const newOrder = {
-        buyer: { name, phone, dni, comentario },
+        buyer: { name, phone, dni, comentario, mail },
         items: cart,
         total: getTotal(cart),
       };
 
       console.log(newOrder)
+      const db = getFirestore()
+      db.collection('orders').add(newOrder)
+      .then((res) => console.log("compra realizada exitosamente", res.id))
+      .catch((err) => console.log("Hay un error", err))
     };
 
 
@@ -87,6 +93,15 @@ const Carrito = () => {
           placeholder="Escriba su DNI"
           value={dni}
           onChange={(e) => setDni(e.target.value)}
+        />
+        <label htmlFor="mail">Mail</label>
+        <input
+          type="text"
+          id="mail"
+          name="mail"
+          placeholder="Escriba su Mail"
+          value={mail}
+          onChange={(e) => setMail(e.target.value)}
         />
         <label htmlFor="phone">¿Algún comentario?</label>
         <input

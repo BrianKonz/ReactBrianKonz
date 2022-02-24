@@ -20,7 +20,7 @@ const ArtistasList = () => {
 
             setArtistas(response.docs.map((doc) => ({...doc.data(), id: doc.id})))
             } catch (err) {
-                setError(err)
+                setError(error)
             }finally{
                 setLoader(false)
             }
