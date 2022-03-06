@@ -40,23 +40,22 @@ const ArtistaDetail = () => {
 
 
     const agregarCarrito = () => {
-        addArtista(artistaDetail, counter)
-        
+        addArtista(artistaDetail, counter)        
     }
 
 return (
     <>
     <div>
-        <div >
+        <div className="contenedorDetail">
             <div>
-                <img src={artistaDetail.imagenEntradas} alt={artistaDetail.artista} />
+                <img className="imgDetail" src={artistaDetail.imagenEntradas} alt={artistaDetail.artista} />
             </div>
             <div>
-                <div>
-                    <h5>{artistaDetail.artista}</h5>
-                    <p>{artistaDetail.descripcion}</p>
+                <div className="textDetail">
+                    <h5 className="titleDetail">{artistaDetail.artista}</h5>
+                    <p className="descriptionDetail">{artistaDetail.descripcion}</p>
                     <Contador counter={counter} setCounter={setCounter} stock={artistaDetail.stock} />
-                    <div>
+                    <div className="buttonDetail">
                         <button className="buttonCarrito" onClick={()=>navegar('/entradas')}>Volver</button>
                         <button className="buttonCarrito" onClick={agregarCarrito}>Agregar al carrito</button>
                     </div>  

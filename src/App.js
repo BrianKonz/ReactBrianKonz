@@ -9,6 +9,8 @@ import Entradas from './pages/Entradas';
 import NotFoundPage from './pages/NotFoundPage';
 import {CartProvider} from './Context/CartContext'
 import Carrito from './pages/Carrito';
+import Footer from './Componentes/Footer/Footer';
+import Gracias from './pages/Gracias';
 
 function App() {
   return (
@@ -34,7 +36,9 @@ function App() {
           <Route path=':artistaId' element={<ArtistaDetail />} />
         </Route>
         <Route path='*' element={<NotFoundPage />} />
+        <Route path='gracias/:orderId' element={<Gracias />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     </CartProvider>
   

@@ -7,7 +7,7 @@ import { useCart } from "../../Context/CartContext";
 
 const NavBar = () => {
 
-    const {cart} = useCart();
+    const {cartCantidad} = useCart();
 
 
 
@@ -26,8 +26,7 @@ const NavBar = () => {
                 <li className="liNav">
                     <Link to='/entradas' className="navText">Entradas</Link>
                 </li>
-                <Link to='/carrito'><BsCart4 className="carritoIcon" /></Link>
-                <span style={{backgroundColor:"red", color:"white"}}> {cart.length} </span>
+                <Link to='/carrito'><BsCart4 className="carritoIcon" /> <span className="carritoNumber"> {cartCantidad} </span> </Link>
                 </ul>
                 
         </>

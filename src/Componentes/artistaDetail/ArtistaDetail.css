@@ -8,6 +8,28 @@
 
 }
 
-p {
-    color: blanchedalmond;
+.contenedorDetail {
+    display: flex;
+    margin: 50px;
+    background-color: rgba(172, 179, 201, 0.322);
+}
+
+.imgDetail {
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.textDetail {
+    margin-left: 20%;
+    padding: 20px;
+}
+
+.titleDetail {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.descriptionDetail {
+    font-size: 15px;
+    margin-bottom: 50px;
 }

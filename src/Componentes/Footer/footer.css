@@ -1,0 +1,35 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: rgb(224, 235, 224);
+}
+  
+  body {
+    height: 100%;
+    width: 100%;
+}
+
+.main-footer {
+    background-color: #073663;
+    height: 100px;
+    width: 100%;
+    margin-top: 450px;
+    text-align: center;
+}
+
+.container-footer {
+    padding: 25px;
+}
+
+.textFooter {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: .9px;
+}
